@@ -1,0 +1,3045 @@
+/* =========================================================
+   TASTYGO - COMPLETE STYLE.CSS
+   Home + Zomato Style Menu + Common Pages
+========================================================= */
+
+
+/* =========================================================
+   1. GLOBAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   2. OLD / COMMON HEADER
+========================================================= */
+
+header {
+    background: #e23744;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+header h1,
+header h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #ffe0d6;
+}
+
+
+/* =========================================================
+   3. GENERAL HERO / SEARCH
+========================================================= */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #666;
+    font-size: 18px;
+}
+
+.search-box {
+    margin: 25px auto;
+    max-width: 600px;
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 14px 25px;
+    border: none;
+    background: #e23744;
+    color: white;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   4. HOME - ZOMATO STYLE
+========================================================= */
+
+.main-header {
+    background: #ffffff;
+    color: #222;
+    display: flex;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header nav a {
+    color: #333;
+}
+
+.main-header nav a:hover {
+    color: #e23744;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #e23744;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   HOME HERO
+========================================================= */
+
+.zomato-hero {
+    min-height: 430px;
+    background: linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url("../images/pizza.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 850px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 0 0 12px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 28px;
+}
+
+.hero-search {
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hero-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 17px;
+    font-size: 15px;
+}
+
+.hero-search button {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-search button:hover {
+    background: #c91f2d;
+}
+
+
+/* =========================================================
+   HOME CATEGORIES
+========================================================= */
+
+.food-categories {
+    background: white;
+    padding: 35px 5%;
+}
+
+.food-categories h2 {
+    margin-top: 0;
+    font-size: 25px;
+}
+
+.category-list {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    min-width: 100px;
+    text-align: center;
+    color: #333;
+}
+
+.category-item span {
+    display: flex;
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background: #fff5f4;
+    border-radius: 50%;
+    font-size: 35px;
+    transition: .2s;
+}
+
+.category-item:hover span {
+    transform: translateY(-5px);
+}
+
+.category-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   HOME POPULAR FOOD
+========================================================= */
+
+.popular-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.popular-section h2 {
+    margin: 0 0 5px;
+    font-size: 28px;
+}
+
+.popular-section > p {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: .25s;
+}
+
+.food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+}
+
+.food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.food-info {
+    padding: 15px;
+}
+
+.food-info h3 {
+    margin: 0 0 8px;
+    font-size: 17px;
+}
+
+.food-info p {
+    color: #777;
+    font-size: 13px;
+    margin: 0;
+}
+
+.food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.food-price {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.food-bottom a {
+    background: #e23744;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   HOME WHY CHOOSE
+========================================================= */
+
+.why-section {
+    background: white;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.why-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-box {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.why-box span {
+    font-size: 38px;
+}
+
+.why-box h3 {
+    margin: 12px 0 8px;
+}
+
+.why-box p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   5. ZOMATO STYLE MENU PAGE
+========================================================= */
+
+.z-menu-header {
+    height: 72px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    gap: 35px;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.z-logo a {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e23744;
+    text-decoration: none;
+}
+
+.z-search {
+    width: 350px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 0 13px;
+}
+
+.z-search span {
+    font-size: 17px;
+    margin-right: 8px;
+}
+
+.z-search form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.z-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 0;
+}
+
+.z-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.z-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.z-nav a:hover {
+    color: #e23744;
+}
+
+.z-nav .z-active {
+    color: #e23744;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   MENU MAIN
+========================================================= */
+
+.z-menu-main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px 60px;
+}
+
+.z-menu-title {
+    margin-bottom: 25px;
+}
+
+.z-menu-title h1 {
+    font-size: 32px;
+    margin: 0 0 6px;
+}
+
+.z-menu-title p {
+    color: #777;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MENU CATEGORIES
+========================================================= */
+
+.z-categories {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 5px 2px 18px;
+    margin-bottom: 20px;
+}
+
+.z-categories::-webkit-scrollbar {
+    display: none;
+}
+
+.z-category {
+    min-width: 82px;
+    height: 82px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.z-category span {
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+
+.z-category p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.z-category:hover,
+.z-category.active {
+    border-color: #e23744;
+    color: #e23744;
+    box-shadow: 0 4px 12px rgba(226,55,68,0.12);
+}
+
+
+/* =========================================================
+   SEARCH RESULT
+========================================================= */
+
+.z-search-result {
+    background: #fff5f4;
+    border-left: 4px solid #e23744;
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MENU SECTION
+========================================================= */
+
+.z-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.z-section-heading h2 {
+    margin: 0 0 4px;
+    font-size: 25px;
+}
+
+.z-section-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOD GRID
+========================================================= */
+
+.z-food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.z-food-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eeeeee;
+    transition: 0.25s;
+}
+
+.z-food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+}
+
+
+/* =========================================================
+   FOOD IMAGE
+========================================================= */
+
+.z-food-image {
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.z-food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.z-food-card:hover .z-food-image img {
+    transform: scale(1.04);
+}
+
+.z-favourite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.95);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOD DETAILS
+========================================================= */
+
+.z-food-details {
+    padding: 14px;
+}
+
+.z-food-details h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: #222;
+}
+
+.z-description {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.4;
+    height: 34px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.z-food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 13px;
+}
+
+.z-food-bottom form {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.z-price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #222;
+}
+
+.z-add-btn {
+    background: #e23744;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.z-add-btn:hover {
+    background: #c91f2d;
+}
+
+
+/* =========================================================
+   NO FOOD
+========================================================= */
+
+.z-no-food {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.z-no-food > div {
+    font-size: 45px;
+}
+
+.z-no-food h2 {
+    margin: 10px 0 5px;
+}
+
+.z-no-food p {
+    color: #777;
+}
+
+.z-no-food a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #e23744;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   MENU FOOTER
+========================================================= */
+
+.z-footer {
+    background: #202020;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.z-footer h3 {
+    color: #e23744;
+    font-size: 24px;
+    margin: 0 0 7px;
+}
+
+.z-footer p {
+    color: #bbb;
+    font-size: 13px;
+}
+
+.z-copy {
+    margin-top: 20px;
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   6. GENERAL FORMS
+   ========================================================= */
+
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+/* MENU SEARCH FORM */
+.z-search form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.z-search form input {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+
+/* MENU ADD TO CART FORM */
+.z-food-bottom form {
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.z-food-bottom form input {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+/* OTHER NORMAL FORMS */
+
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+form button {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    opacity: .9;
+}
+
+
+/* MENU ADD BUTTON */
+.z-food-bottom .z-add-btn {
+    background: #e23744;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0;
+}
+
+.z-food-bottom .z-add-btn:hover {
+    background: #c91f2d;
+}
+
+
+/* =========================================================
+   7. FOOTER COMMON
+========================================================= */
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    color: #bbb;
+}
+
+
+/* =========================================================
+   8. RESPONSIVE - HOME
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .popular-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .z-food-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .z-menu-header {
+        gap: 20px;
+    }
+
+    .z-search {
+        width: 260px;
+    }
+
+    .z-nav {
+        gap: 12px;
+    }
+
+    .z-nav a {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   9. RESPONSIVE - TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card img {
+        height: 160px;
+    }
+
+
+    /* MENU MOBILE */
+
+    .z-menu-header {
+        height: auto;
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .z-logo {
+        width: 100%;
+    }
+
+    .z-search {
+        width: 100%;
+    }
+
+    .z-nav {
+        width: 100%;
+        overflow-x: auto;
+        margin-left: 0;
+        gap: 18px;
+    }
+
+    .z-menu-main {
+        padding: 25px 15px 45px;
+    }
+
+    .z-menu-title h1 {
+        font-size: 27px;
+    }
+
+    .z-food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .z-food-image {
+        height: 140px;
+    }
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-card img {
+        height: 190px;
+    }
+
+    .hero-search {
+        flex-direction: column;
+        background: transparent;
+        gap: 8px;
+    }
+
+    .hero-search input {
+        border-radius: 6px;
+    }
+
+    .hero-search button {
+        padding: 13px;
+        border-radius: 6px;
+    }
+
+    .z-food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .z-food-image {
+        height: 190px;
+    }
+
+    .z-menu-title h1 {
+        font-size: 24px;
+    }
+}
+/* =========================================================
+   MENU FINAL FIX - ALL CARDS SAME SIZE
+========================================================= */
+
+.z-food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.z-food-card {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.z-food-image {
+    width: 100%;
+    height: 180px;
+    min-height: 180px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.z-food-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.z-food-details {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 145px;
+}
+
+.z-food-details h3 {
+    height: 22px;
+    line-height: 22px;
+    margin: 0 0 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.z-description {
+    height: 34px;
+    min-height: 34px;
+    line-height: 17px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.z-food-bottom {
+    margin-top: auto;
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.z-food-bottom form {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: transparent;
+}
+
+.z-price {
+    height: 20px;
+    line-height: 20px;
+}
+
+.z-add-btn {
+    height: 34px;
+    min-width: 60px;
+    padding: 0 15px;
+}
+
+
+/* =========================================================
+   MENU TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .z-food-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .z-food-image,
+    .z-food-image img {
+        height: 175px;
+        min-height: 175px;
+    }
+}
+
+
+/* =========================================================
+   MENU MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .z-food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .z-food-image,
+    .z-food-image img {
+        height: 145px;
+        min-height: 145px;
+    }
+
+    .z-food-details {
+        padding: 12px;
+    }
+
+    .z-food-details h3 {
+        font-size: 15px;
+    }
+
+    .z-description {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .z-food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .z-food-image,
+    .z-food-image img {
+        height: 190px;
+        min-height: 190px;
+    }
+}
+/* =========================================================
+   HOME PAGE FINAL FIX
+========================================================= */
+
+/* HOME HEADER */
+.main-header {
+    background: #ffffff;
+    color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .logo h1 {
+    margin: 0;
+    color: #e23744;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.main-header nav a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main-header nav a:hover {
+    color: #e23744;
+}
+
+
+/* HOME HERO */
+.zomato-hero {
+    min-height: 430px;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("../images/pizza.jpg") center/cover no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin: 0 0 12px;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin: 0 0 28px;
+}
+
+
+/* HOME SEARCH */
+.hero-search {
+    width: 100%;
+    max-width: 700px;
+    min-height: 55px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    color: #333;
+}
+
+.hero-search > span {
+    padding-left: 15px;
+}
+
+.hero-search > input {
+    width: 180px;
+    border: none;
+    outline: none;
+    padding: 17px 10px;
+    font-size: 14px;
+    background: white;
+}
+
+.hero-search .search-line {
+    width: 1px;
+    height: 30px;
+    background: #ddd;
+    padding: 0;
+}
+
+.hero-search form {
+    flex: 1;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-search form span {
+    padding-left: 10px;
+}
+
+.hero-search form input {
+    flex: 1;
+    width: auto;
+    border: none;
+    outline: none;
+    padding: 17px 10px;
+    margin: 0;
+    background: white;
+}
+
+.hero-search form button {
+    height: 55px;
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-search form button:hover {
+    background: #c91f2d;
+}
+
+
+/* HOME CATEGORY */
+.food-categories {
+    background: #fff;
+    padding: 35px 5%;
+}
+
+.food-categories h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.food-categories .section-subtitle {
+    margin: 0 0 22px;
+    color: #777;
+    font-size: 14px;
+}
+
+.category-list {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    min-width: 100px;
+    text-align: center;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.category-item .category-icon {
+    width: 75px;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff5f4;
+    border-radius: 50%;
+    font-size: 35px;
+    transition: .2s;
+}
+
+.category-item:hover .category-icon {
+    transform: translateY(-5px);
+}
+
+.category-item h3 {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+
+
+/* HOME POPULAR */
+.popular-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.popular-section .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.popular-section .section-heading h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.popular-section .section-heading a {
+    color: #e23744;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.popular-grid .food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: .25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-grid .food-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,.10);
+}
+
+.popular-grid .food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.popular-grid .food-info {
+    padding: 15px;
+}
+
+.popular-grid .food-info h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.popular-grid .food-description {
+    color: #777;
+    font-size: 13px;
+    margin: 0;
+    height: 18px;
+    overflow: hidden;
+}
+
+.popular-grid .food-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.popular-grid .food-bottom strong {
+    font-size: 17px;
+}
+
+.popular-grid .food-bottom a {
+    padding: 0;
+    background: transparent;
+}
+
+.popular-grid .food-bottom button {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 7px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.popular-grid .food-bottom button:hover {
+    background: #c91f2d;
+}
+
+
+/* HOME WHY */
+.why-section {
+    background: white;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.why-section h2 {
+    font-size: 28px;
+    margin: 0 0 30px;
+}
+
+.why-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-box {
+    padding: 25px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.why-box > div {
+    font-size: 38px;
+}
+
+.why-box h3 {
+    margin: 12px 0 8px;
+}
+
+.why-box p {
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* HOME FOOTER */
+body > footer {
+    background: #202020;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+body > footer h3 {
+    color: #e23744;
+    font-size: 24px;
+    margin: 0 0 7px;
+}
+
+body > footer p {
+    color: #bbb;
+    font-size: 13px;
+    margin: 7px 0;
+}
+
+
+/* HOME MOBILE */
+@media (max-width: 1000px) {
+
+    .popular-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .main-header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+
+    .main-header .logo {
+        width: 100%;
+    }
+
+    .main-header nav {
+        width: 100%;
+        overflow-x: auto;
+        gap: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-search {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px;
+    }
+
+    .hero-search > input {
+        width: calc(100% - 40px);
+    }
+
+    .hero-search .search-line {
+        display: none;
+    }
+
+    .hero-search form {
+        width: 100%;
+        flex: none;
+    }
+
+    .hero-search form input {
+        min-width: 0;
+    }
+
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+}
+/* TASTYGO LOGO */
+
+.main-header .logo img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+.z-logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+/* =========================================================
+   CART PAGE FIX
+   ========================================================= */
+
+.category {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.category .box {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.category .box h3 {
+    margin: 0 0 10px;
+}
+
+.category .box p {
+    margin: 8px 0;
+}
+
+/* Quantity + / - forms */
+.category .box form {
+    display: inline-block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 5px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.category .box form button {
+    padding: 7px 13px;
+    margin: 0;
+    border-radius: 6px;
+}
+
+/* Quantity number */
+.category .box strong {
+    display: inline-block;
+    min-width: 25px;
+    text-align: center;
+}
+
+/* Remove button */
+.category .box form button[name="remove"] {
+    background: #e23744;
+}
+
+/* Cart total */
+.category > h2 {
+    margin-top: 25px;
+}
+
+/* Clear cart form */
+.category > form {
+    max-width: none !important;
+    width: auto !important;
+    margin: 15px 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+/* Clear button */
+.category > form button {
+    background: #555;
+}
+
+/* Checkout button */
+.category > a button {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.category > a button:hover {
+    background: #c91f2d;
+}
+/* =========================================================
+   TASTYGO - ZOMATO STYLE CART
+   ========================================================= */
+
+.category {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+/* Cart heading */
+.category > h2:first-child {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* Individual cart item */
+.category .box {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Food name */
+.category .box h3 {
+    width: 220px;
+    margin: 0;
+    font-size: 18px;
+    color: #222;
+}
+
+/* Price and quantity text */
+.category .box p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Quantity label */
+.category .box p:nth-of-type(2) {
+    margin-left: auto;
+}
+
+/* All small forms inside cart */
+.category .box form {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* Quantity buttons */
+.category .box form button[name="decrease"],
+.category .box form button[name="increase"] {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: #e23744;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Quantity number */
+.category .box strong {
+    min-width: 25px;
+    text-align: center;
+    font-size: 15px;
+    color: #222;
+}
+
+/* Item total */
+.category .box p:last-of-type {
+    min-width: 100px;
+    text-align: right;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Remove button */
+.category .box form button[name="remove"] {
+    background: transparent;
+    color: #e23744;
+    border: 1px solid #e23744;
+    padding: 7px 13px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.category .box form button[name="remove"]:hover {
+    background: #e23744;
+    color: white;
+}
+
+/* Total */
+.category > h2:not(:first-child) {
+    font-size: 24px;
+    color: #222;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+}
+
+/* Clear Cart form */
+.category > form {
+    width: auto !important;
+    max-width: none !important;
+    margin: 15px 10px 15px 0 !important;
+    padding: 0 !important;
+    display: inline-block;
+    background: transparent !important;
+}
+
+/* Clear Cart */
+.category > form button {
+    background: #555 !important;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 7px;
+}
+
+/* Checkout */
+.category > a button {
+    background: #e23744;
+    color: white;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.category > a button:hover {
+    background: #c91f2d;
+}
+
+
+/* Empty cart */
+.category > p {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    color: #777;
+    border: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   CART MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .category {
+        margin: 30px auto;
+        padding: 0 15px;
+    }
+
+    .category .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .category .box h3 {
+        width: auto;
+        grid-column: 1 / -1;
+    }
+
+    .category .box p:nth-of-type(2) {
+        margin-left: 0;
+    }
+
+    .category .box p:last-of-type {
+        text-align: left;
+    }
+}
+/* =========================================================
+   TASTYGO MODERN ZOMATO STYLE CART
+   ========================================================= */
+
+.tg-cart-page {
+    background: #f8f8f8;
+    min-height: 70vh;
+    padding: 45px 20px;
+}
+
+.tg-cart-container {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+.tg-cart-left {
+    min-width: 0;
+}
+
+.tg-cart-heading {
+    margin-bottom: 25px;
+}
+
+.tg-cart-heading h1 {
+    margin: 0 0 7px;
+    font-size: 30px;
+    color: #222;
+}
+
+.tg-cart-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* CART ITEM */
+
+.tg-cart-item {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    align-items: center;
+    gap: 22px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tg-item-info h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+    color: #222;
+}
+
+.tg-item-info p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* QUANTITY */
+
+.tg-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tg-quantity form {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    background: transparent !important;
+}
+
+.tg-quantity button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #e23744;
+    background: white;
+    color: #e23744;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tg-quantity button:hover {
+    background: #e23744;
+    color: white;
+}
+
+.tg-quantity strong {
+    min-width: 20px;
+    text-align: center;
+}
+
+
+/* ITEM TOTAL */
+
+.tg-item-total {
+    min-width: 80px;
+    text-align: right;
+    color: #222;
+}
+
+
+/* REMOVE */
+
+.tg-remove-form {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    background: transparent !important;
+}
+
+.tg-remove-form button {
+    background: transparent !important;
+    color: #e23744 !important;
+    border: none !important;
+    padding: 5px !important;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tg-remove-form button:hover {
+    text-decoration: underline;
+}
+
+
+/* CONTINUE SHOPPING */
+
+.tg-continue {
+    margin-top: 20px;
+}
+
+.tg-continue a {
+    color: #e23744;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ORDER SUMMARY
+   ========================================================= */
+
+.tg-summary {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+
+    position: sticky;
+    top: 90px;
+}
+
+.tg-summary h2 {
+    margin: 0 0 22px;
+    font-size: 21px;
+    color: #222;
+}
+
+.tg-summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.tg-summary-row strong {
+    color: #222;
+}
+
+.tg-summary-row strong:last-child {
+    color: #2e9b50;
+}
+
+.tg-summary-line {
+    height: 1px;
+    background: #eee;
+    margin: 20px 0;
+}
+
+.tg-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.tg-summary-total span {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tg-summary-total strong {
+    font-size: 22px;
+    color: #e23744;
+}
+
+
+/* CHECKOUT */
+
+.tg-checkout-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-decoration: none;
+
+    background: #e23744;
+    color: white;
+
+    padding: 13px 15px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tg-checkout-btn:hover {
+    background: #c91f2d;
+}
+
+
+/* CLEAR CART */
+
+.tg-clear-form {
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: transparent !important;
+}
+
+.tg-clear-form button {
+    width: 100%;
+    background: #f5f5f5 !important;
+    color: #555 !important;
+    border: 1px solid #ddd !important;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   EMPTY CART
+   ========================================================= */
+
+.tg-empty-cart {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 70px 30px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tg-empty-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.tg-empty-cart h2 {
+    margin: 0 0 8px;
+}
+
+.tg-empty-cart p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.tg-empty-cart a {
+    display: inline-block;
+    background: #e23744;
+    color: white;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .tg-cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tg-summary {
+        position: static;
+    }
+
+    .tg-cart-item {
+        grid-template-columns: 1fr auto;
+        gap: 15px;
+    }
+
+    .tg-item-total {
+        text-align: left;
+    }
+
+    .tg-remove-form {
+        justify-self: end;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .tg-cart-page {
+        padding: 25px 12px;
+    }
+
+    .tg-cart-heading h1 {
+        font-size: 25px;
+    }
+
+    .tg-cart-item {
+        padding: 16px;
+    }
+
+    .tg-item-info {
+        grid-column: 1 / -1;
+    }
+
+    .tg-quantity {
+        grid-column: 1;
+    }
+
+    .tg-item-total {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .tg-remove-form {
+        grid-column: 1 / -1;
+        justify-self: start;
+    }
+}
+/* =========================================================
+   TASTYGO - ZOMATO STYLE LOGIN
+   ========================================================= */
+
+.tg-login-page {
+    background: #f8f8f8;
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+.tg-auth-header {
+    height: 72px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    box-sizing: border-box;
+}
+
+.tg-auth-logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: #e23744;
+}
+
+.tg-auth-header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.tg-auth-header nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tg-auth-header nav a:hover {
+    color: #e23744;
+}
+
+
+/* MAIN */
+
+.tg-auth-main {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* LOGIN CARD */
+
+.tg-auth-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: #ffffff;
+
+    padding: 38px 40px;
+
+    border-radius: 16px;
+
+    border: 1px solid #eeeeee;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+
+/* ICON */
+
+.tg-auth-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f1;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* HEADING */
+
+.tg-auth-card h1 {
+    text-align: center;
+
+    margin: 0 0 8px;
+
+    font-size: 26px;
+
+    color: #222;
+}
+
+.tg-auth-subtitle {
+    text-align: center;
+
+    margin: 0 0 28px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 20px;
+}
+
+
+/* FORM */
+
+.tg-auth-form {
+    width: 100% !important;
+
+    max-width: none !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border-radius: 0 !important;
+}
+
+.tg-auth-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+.tg-auth-form input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 14px;
+
+    margin: 0 0 18px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.tg-auth-form input:focus {
+    border-color: #e23744;
+
+    box-shadow: 0 0 0 3px rgba(226,55,68,0.08);
+}
+
+
+/* LOGIN BUTTON */
+
+.tg-auth-btn {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #e23744;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.tg-auth-btn:hover {
+    background: #c91f2d;
+}
+
+
+/* BOTTOM LINK */
+
+.tg-auth-bottom {
+    text-align: center;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+.tg-auth-bottom a {
+    color: #e23744;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin-left: 5px;
+}
+
+.tg-auth-bottom a:hover {
+    text-decoration: underline;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .tg-auth-header {
+        height: auto;
+
+        padding: 18px 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .tg-auth-header nav {
+        gap: 16px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .tg-auth-main {
+        padding: 30px 15px;
+
+        align-items: flex-start;
+    }
+
+    .tg-auth-card {
+        padding: 30px 22px;
+    }
+}
+/* =========================================================
+   TASTYGO HEADER NAV BUTTON STYLE
+   ========================================================= */
+
+.tg-auth-header nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 8px 13px;
+    border-radius: 7px;
+
+    transition: 0.2s;
+}
+
+.tg-auth-header nav a:hover {
+    background: #fff0f1;
+    color: #e23744;
+}
+
+/* Login page active link */
+.tg-auth-header nav a[href="login.php"] {
+    background: #e23744;
+    color: white;
+}
+
+.tg-auth-header nav a[href="login.php"]:hover {
+    background: #c91f2d;
+    color: white;
+}
+/* REGISTER ACTIVE NAV */
+
+.tg-auth-header nav a.tg-active-nav {
+    background: #e23744;
+    color: white;
+}
+
+.tg-auth-header nav a.tg-active-nav:hover {
+    background: #c91f2d;
+    color: white;
+}
+/* =========================================================
+   TASTYGO - CONTACT PAGE
+   ========================================================= */
+
+.tg-contact-page {
+    background: #f8f8f8;
+    min-height: 100vh;
+}
+
+
+/* CONTACT MAIN */
+
+.tg-contact-main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+
+/* HEADING */
+
+.tg-contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tg-contact-heading h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    color: #222;
+}
+
+.tg-contact-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* TWO COLUMNS */
+
+.tg-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+
+/* CONTACT INFO */
+
+.tg-contact-info {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.tg-contact-info h2,
+.tg-contact-card h2 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #222;
+}
+
+.tg-contact-text {
+    color: #777;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 30px;
+}
+
+
+/* CONTACT ITEMS */
+
+.tg-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.tg-contact-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0f1;
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.tg-contact-item h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.tg-contact-item p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* CONTACT CARD */
+
+.tg-contact-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+
+/* FORM */
+
+.tg-contact-form {
+    width: 100% !important;
+    max-width: none !important;
+
+    margin: 20px 0 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+.tg-contact-form label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.tg-contact-form input,
+.tg-contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+    margin: 0 0 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+}
+
+.tg-contact-form input:focus,
+.tg-contact-form textarea:focus {
+    border-color: #e23744;
+    box-shadow: 0 0 0 3px rgba(226,55,68,0.08);
+}
+
+
+/* SEND BUTTON */
+
+.tg-contact-form button {
+    width: 100%;
+
+    padding: 13px;
+
+    background: #e23744;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.tg-contact-form button:hover {
+    background: #c91f2d;
+}
+
+
+/* ACTIVE CONTACT NAV */
+
+.tg-auth-header nav a.tg-active-nav {
+    background: #e23744;
+    color: white;
+}
+
+.tg-auth-header nav a.tg-active-nav:hover {
+    background: #c91f2d;
+    color: white;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .tg-contact-main {
+        padding: 35px 15px;
+    }
+
+    .tg-contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tg-contact-heading h1 {
+        font-size: 28px;
+    }
+
+    .tg-contact-info,
+    .tg-contact-card {
+        padding: 25px;
+    }
+}
+/* =========================================================
+   TASTYGO - COMMON ZOMATO STYLE HEADER NAVIGATION
+   ========================================================= */
+
+header nav a {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-left: 5px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+/* Hover */
+header nav a:hover {
+    background: #e23744;
+    color: white;
+}
+
+/* Current page / active button */
+header nav a[href$="index.php"]:hover,
+header nav a[href$="menu.php"]:hover,
+header nav a[href$="login.php"]:hover,
+header nav a[href$="register.php"]:hover,
+header nav a[href$="contact.php"]:hover {
+    background: #e23744;
+    color: white;
+}
+
+/* Cart */
+header nav a[href$="cart.php"]:hover {
+    background: #e23744;
+    color: white;
+}
+/* ALL HEADER NAV BUTTONS */
+
+.main-header nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-header nav a {
+    color: white;
+    background: #e23744;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.main-header nav a:hover {
+    background: #c91f2d;
+    color: white;
+}
+.main-header .logo img {
+    width: 170px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+.z-logo img {
+    width: 160px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+/* =========================
+   TASTYGO FOOTER
+========================= */
+
+.tg-footer {
+    background: #1f1f1f;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.tg-footer-top {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px 40px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+    gap: 40px;
+}
+
+.tg-footer-brand h2 {
+    margin: 0 0 12px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #e23744;
+}
+
+.tg-footer-brand p {
+    color: #bdbdbd;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 260px;
+}
+
+.tg-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tg-footer-column h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.tg-footer-column a {
+    text-decoration: none;
+    color: #bdbdbd;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.tg-footer-column a:hover {
+    color: #e23744;
+}
+
+.tg-footer-column p {
+    margin: 0;
+    color: #bdbdbd;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tg-footer-bottom {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    border-top: 1px solid #383838;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.tg-footer-bottom p {
+    margin: 0;
+    color: #999999;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .tg-footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .tg-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .tg-footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .tg-footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .tg-footer-brand {
+        grid-column: auto;
+    }
+}
+.main-header .logo img {
+    width: 220px;
+    height: 65px;
+    object-fit: contain;
+    display: block;
+}
