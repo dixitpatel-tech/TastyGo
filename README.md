@@ -46,3 +46,18 @@ GitHub: https://github.com/dixitpatel-tech
  📌 Project Type
 
 BCA Project | Web Development
+
+
+## 📸 Project Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Food Menu
+![Food Menu](screenshots/menu.png)
+
+### Shopping Cart
+![Shopping Cart](screenshots/cart.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/admin.png)
