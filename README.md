@@ -22,6 +22,10 @@ TastyGo is a web-based food ordering system that allows users to browse food ite
 - MySQL
 - XAMPP
 
+🌐 Live Demo
+
+"Visit TastyGo" (https://tastygofood.42web.io/TastyGo/)
+
 ⚙️ Installation
 
 1. Download this repository.
@@ -31,7 +35,7 @@ TastyGo is a web-based food ordering system that allows users to browse food ite
 5. Create the database using phpMyAdmin.
 6. Import the project database.
 7. Configure the database connection.
-8. Open "http://localhost/TastyGo" in your browser.
+8. Run the project using XAMPP.
 
 👨‍💻 Developer
 
