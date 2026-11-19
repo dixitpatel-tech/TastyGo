@@ -43,6 +43,6 @@ Dixit Chaudhary
 
 GitHub: https://github.com/dixitpatel-tech
 
-📌 Project Type
+ 📌 Project Type
 
-BCA Academic Project
+BCA Project | Web Development
